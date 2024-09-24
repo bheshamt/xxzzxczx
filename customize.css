@@ -1,9 +1,27 @@
-body
+h1
 {
-	background-color: red
+	font-family:	Cambria;
+	text-align:	center;
 }
 
-p
+label
 {
-	color: white
+	display:	inline-block;
+	width:	105px;
+	text-align:	center;
+}
+
+label[id="lblmessage"]
+{
+	display:	inline-block;
+	width:	25%;
+	color:	blue;
+	text-align:	left;
+}
+
+button[id="btnsubmit"]
+{
+	display:	inline-block;
+	width:	4%;
+	margin-left:	11%;
 }

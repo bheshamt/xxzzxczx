@@ -1,34 +1,13 @@
 window.addEventListener("load",addListener);
-var firstname, lastname, fullname;
+var sum = "";
 function addListener()
 {
-	document.getElementByID("btnsubmit").addEventListener("click",fullname);
+	document.getElementById("btnone").addEventListener("click",ButtonOne);
 }
 
-function fullname()
+function ButtonOne()
 {
-	firstname = document.getElementById("txtfirstname").value;
-	lastname = document.getElementById("txtlastname").value;
-	if (firstname == "" || lastname == "")
-	{
-		alert("Either the first or last name is missing!")
-		CheckFocus();
-	}
-	else
-	{
-		fullname = firstname + " " + lastname;
-		document.getElementById(lblmessage).textContent = "Hello " + fullname;
-	}
-}
-
-export function CheckFocus()
-{
-	if (firstname == "")
-	{
-		document.GetElementByID("txtfirstname").focus();
-	}
-	else
-	{
-		document.GetElementById("txtlastname").focus();
-	}
+	var numone = document.getElementById("txtnumone").value;
+	sum = numone + numone;
+	document.getElementById("lblanswer").textContent = sum;
 }

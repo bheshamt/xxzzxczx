@@ -24,39 +24,46 @@ button {
     margin: 2px;
 }
 
-#btnClear, #btnangle {
+#btnClear, #btnangle
+{
     background-color: #003366;
     color: white;
 }
 
 #btnpi, #btnsquareroot, #btnsquare, #btnpercent, #btnlog, #btnln, #btnexponent, 
-#btnflip, #btndivide, #btnmultiply, #btnsubtract, #btnadd, #btndecimal {
+#btnflip, #btndivide, #btnmultiply, #btnsubtract, #btnadd, #btndecimal
+{
     background-color: #ADD8E6;
     color: black;
 }
 
-#btnenter {
+#btnenter
+{
     background-color: gray;
     color: white;
 }
 
-#btncos, #btnsin, #btntan {
+#btncos, #btnsin, #btntan
+{
     background-color: #003366;
     color: white;
 }
 
-#btn0, #btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7, #btn8, #btn9 {
+#btn0, #btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7, #btn8, #btn9
+{
     background-color: #1E90FF;
     color: white;
 }
 
-#btndegrees, #btnradians {
+#btndegrees, #btnradians
+{
     background-color: #4682B4;
     color: white;
     width: 110px;
 }
 
-#txtnumdisplay {
+#txtnumdisplay
+{
     background-color: lightgray;
     width: 220px;
     height: 40px;
@@ -64,6 +71,7 @@ button {
     font-size: 20px;
 }
 
-br {
+br
+{
     margin: 2px 0;
 }

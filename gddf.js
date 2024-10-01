@@ -1,5 +1,6 @@
 window.addEventListener("load",addListener);
 var input, tempnum, tempop, res
+tempop = ""
 tempnum = ""
 function addListener()
 {
@@ -16,7 +17,7 @@ function addListener()
 	document.getElementById("btn3").addEventListener("click",three)
 	document.getElementById("btn0").addEventListener("click",zero)
 	document.getElementById("btndecimal").addEventListener("click",decimal)
-	document.getElementById("btnadd").addEventListener("click",checkadd)
+	document.getElementById("btnadd").addEventListener("click",add)
 	document.getElementById("btnsubtract").addEventListener("click",subtract)
 	document.getElementById("btnmultiply").addEventListener("click",multiply)
 	document.getElementById("btndivide").addEventListener("click",divide)
@@ -31,8 +32,8 @@ function add()
 
 function subtract()
 {
+	document.getElementById("txtnumdisplay").value = "";
     tempop = "-";
-    document.getElementById("txtnumdisplay").value = "";
 	enter
 }
 
@@ -57,19 +58,19 @@ function enter()
 		case "+":
 			tempnum = document.getElementById("txtnumdisplay").value;
             res = parseFloat(tempnum) + parseFloat(input);
-            break;
+			document.getElementById("txtnumdisplay").value = tempop;
         case "-":
 			tempnum = document.getElementById("txtnumdisplay").value;
             res = parseFloat(tempnum) - parseFloat(input);
-            break;
+			document.getElementById("txtnumdisplay").value = res;
         case "x":
 			tempnum = document.getElementById("txtnumdisplay").value;
             res = parseFloat(tempnum) * parseFloat(input);
-            break;
+			document.getElementById("txtnumdisplay").value = res;
         case "/":
 			tempnum = document.getElementById("txtnumdisplay").value;
             res = parseFloat(tempnum) / parseFloat(input);
-            break;
+			document.getElementById("txtnumdisplay").value = res;
 		case "":
 			alert("Please enter something.")
 			break;
@@ -81,7 +82,8 @@ function clear()
 	document.getElementById("txtnumdisplay").value = null;
 }
 
-function seven() {
+function seven()
+{
     input = document.getElementById("txtnumdisplay").value += "7";
 }
 
@@ -90,19 +92,23 @@ function eight()
     input = document.getElementById("txtnumdisplay").value += "8";
 }
 
-function nine() {
+function nine()
+{
     input = document.getElementById("txtnumdisplay").value += "9";
 }
 
-function four() {
+function four()
+{
     input = document.getElementById("txtnumdisplay").value += "4";
 }
 
-function five() {
+function five()
+{
     input = document.getElementById("txtnumdisplay").value += "5";
 }
 
-function six() {
+function six()
+{
     input = document.getElementById("txtnumdisplay").value += "6";
 }
 
@@ -128,7 +134,5 @@ function zero()
 
 function decimal()
 {
-    if (document.getElementById("txtnumdisplay").value.includes(".")) {
-        document.getElementById("txtnumdisplay").value += ".";
-    }
+	document.getElementById("txtnumdisplay").value += ".";
 }

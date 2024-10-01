@@ -27,7 +27,6 @@ function add()
 {
     tempop = "+";
     document.getElementById("txtnumdisplay").value = "";
-	enter
 }
 
 function subtract()
@@ -57,8 +56,8 @@ function enter()
 	{
 		case "+":
 			tempnum = document.getElementById("txtnumdisplay").value;
-            res = parseFloat(tempnum) + parseFloat(input);
-			document.getElementById("txtnumdisplay").value = tempop;
+            res = parseFloat(input) + parseFloat(tempnum);
+			document.getElementById("txtnumdisplay").value = res;
         case "-":
 			tempnum = document.getElementById("txtnumdisplay").value;
             res = parseFloat(tempnum) - parseFloat(input);
@@ -109,7 +108,7 @@ function five()
 
 function six()
 {
-    input = document.getElementById("txtnumdisplay").value += "6";
+    input = document.getElementById("txtnumdisplay").value = "6";
 }
 
 function one()

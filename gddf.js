@@ -2,12 +2,12 @@ window.addEventListener("load",addListener);
 
 function addListener()
 {
-	document.getElementById("btngrade").addEventListener("click",CheckGrade);
+	document.getElementById("btngrade").addEventListener("click",CheckInfo);
 }
 
-function CheckGrade()
+function CheckInfo()
 {
-	var grade, msg = "Please enter the proper grade from 0-100";
+	var grade, msg = "Please enter a valid grade from 0-100";
 	
 	grade = document.getElementById("txtgrade").value;
 	
@@ -15,25 +15,50 @@ function CheckGrade()
 	{
 		alert(msg);
 		document.getElementById("txtgrade").value = "";
+		document.getElementById("txtgrade").focus();
 	}
 	else
 	{
-		GPAGrade(checkgpa);
+		LetterCheck(grade);
 	}
 }
 
-function GPAGrade(gpa)
+function LetterCheck(gpa)
 {
 	switch(gpa)
 	{
-		case "66":
-			msgdisp = "66";
+		case 97-100:
+			msgdisp = "A+";
+			break;
+			
+		case 93-96:
+			msgdisp = "A";
+			break;
+			
+		case 92-90:
+			msgdisp = "A-";
+			break;
+			
+		case 89-87:
+			mspdisp = "B+"
+			break;
+			
+		case 83-86:
+			msgdisp = "B"
+			break;
+			
+		case 82-80:
+			msgdisp = "B-"
+			break;
+			
+		case 79-77:
+			msgdisp = "C+"
 			break;
 			
 		default:
-			msgdisp = "Not a valid grade.";
+			msgdisp = "Something went wrong...";
 			break;
 	}
 	
-	document.getElementById("lblgrade").textContent = msgdisp;
+	document.getElementById("dispgrade").textContent = "Letter Grade: " + msgdisp;
 }

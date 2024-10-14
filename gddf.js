@@ -19,46 +19,129 @@ function CheckInfo()
 	}
 	else
 	{
+        document.getElementById("dispgrade").textContent = "Percent Grade: " + grade + "%";
 		LetterCheck(grade);
 	}
 }
 
-function LetterCheck(gpa)
+function LetterCheck(letter)
 {
-	switch(gpa)
+	switch(true)
 	{
-		case 97-100:
-			msgdisp = "A+";
+		case letter >= 97:
+			disp = "A+";
 			break;
 			
-		case 93-96:
-			msgdisp = "A";
+		case letter >= 93:
+			disp = "A";
 			break;
 			
-		case 92-90:
-			msgdisp = "A-";
+		case letter >= 90:
+			disp = "A-";
 			break;
 			
-		case 89-87:
-			mspdisp = "B+"
+		case letter >= 87:
+			disp = "B+"
 			break;
 			
-		case 83-86:
-			msgdisp = "B"
+		case letter >= 83:
+			disp = "B"
 			break;
 			
-		case 82-80:
-			msgdisp = "B-"
+		case letter >= 80:
+			disp = "B-"
 			break;
 			
-		case 79-77:
-			msgdisp = "C+"
+		case letter >= 77:
+			disp = "C+"
+			break;
+		
+        case letter >= 73:
+			disp = "C"
+			break;
+
+	    case letter >= 70:
+			disp = "C-"
+			break;
+        
+        case letter >= 67:
+			disp = "D+"
+			break;
+			
+        case letter >= 66:
+			disp = "D"
+			break;
+			
+        case letter <= 65:
+			disp = "F"
 			break;
 			
 		default:
-			msgdisp = "Something went wrong...";
+			disp = "Something went wrong...";
 			break;
 	}
 	
-	document.getElementById("dispgrade").textContent = "Letter Grade: " + msgdisp;
+	document.getElementById("displetter").textContent = "Letter Grade: " + disp;
+    GPACheck(disp)
+}
+
+function GPACheck(gpa)
+{
+    switch(gpa)
+    {
+        case "A+":
+            disp = "4.0"
+            break;
+        
+        case "A":
+            disp = "4.0"
+            break;
+
+        case "A-":
+            disp = "3.7"
+            break;
+
+        case "B+":
+            disp = "3.3"
+            break;
+
+        case "B":
+            disp = "3.0"
+            break;
+        
+        case "B-":
+            disp = "2.7"
+            break;
+
+        case "C+":
+            disp = "2.3"
+            break;
+
+        case "C":
+            disp = "2.0"
+            break;
+
+        case "C-":
+            disp = "1.7"
+            break;
+
+        case "D+":
+            disp = "1.3"
+            break;
+
+        case "D":
+            disp = "1.0"
+            break;
+    
+        case "F":
+            disp = "0.0"
+            break;
+
+
+        default:
+            disp = "Something went wrong..."
+            break;
+    }
+
+    document.getElementById("dispgpa").textContent = "GPA: " + disp;
 }

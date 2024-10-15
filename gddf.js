@@ -2,7 +2,48 @@ window.addEventListener("load",addListener);
 
 function addListener()
 {
+    document.getElementById("btnname").addEventListener("click",CheckName);
+    document.getElementById("btnosis").addEventListener("click",CheckOSIS);
 	document.getElementById("btngrade").addEventListener("click",CheckInfo);
+}
+
+function CheckName()
+{
+    var first, last, msg = "The first and/or last name box is empty and/or conains numbers."
+
+    first = document.getElementById("txtfirstname").value;
+    last = document.getElementById("txtlastname").value;
+
+    if (first == "" || last == "" || first >= 0 || last >= 0)
+    {
+        alert(msg)
+        document.getElementById("txtfirstname").value = "";
+        document.getElementById("txtlastname").value = "";
+        document.getElementById("txtfirstname").focus();
+    }
+    else
+    {
+        fullname = first + " " + last;
+        document.getElementById("dispname").textContent = "Name: " + fullname;
+    }
+}
+
+function CheckOSIS()
+{
+    var nums, msg = "Please enter a valid 9 digit OSIS number."
+
+    nums = document.getElementById("txtosis").value;
+
+    if(nums == "" || (nums >= 999999999 || nums <= 0))
+    {
+        alert(msg)
+        document.getElementById("txtosis").value = "";
+        document.getElementById("txtosis").focus();
+    }
+    else
+    {
+        document.getElementById("disposis").textContent = "OSIS Number: " + nums;
+    }
 }
 
 function CheckInfo()

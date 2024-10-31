@@ -1,18 +1,25 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title>Activity - For Loop</title>
-	<link rel="stylesheet" type="text/css" href="styles.css" media="screen"></link>
-</head>
-<body>
-	<script type="text/javascript" src="java.js"></script>
-	
-    <h1>For Loop</h1>
-
-    <label id="lblinput">How many grades do you want to enter? </label>
-    <input type="text" id="txtinput" autofocus></input>
-    <button type="button" id="btnsubmit">Submit</button>
-
-    <label id="lbldisp"></label>
-</body>
+	<head>
+		<title>Class Schedule</title>
+		<link rel="stylesheet" type="text/css" href="style.css"></link>
+	</head>
+	<body>
+		<h1>Schedule</h1>
+		<div id="askinfo">
+			<label id="lblfirstname">First Name:</label>
+			<input type="text" id="txtfirstname" size="8" autofocus></input>
+			<label id="lbllastname">Last Name:</label>
+			<input type="text" id="txtlastname" size="8"></input>
+			<label id="lblid">Student ID:</label>
+			<input type="text" id="txtid" maxlength="9" size="6"></input>
+			<label id="lblgradelvl">Grade Level:</label>
+			<input type="text" id="txtgradelvl" maxlength="2" size="1"></input>
+			<button type="button" id="btnsubmit">Submit</button>
+		</div>
+		<div id="outputtable">
+			<table id="table">
+				
+			</table>
+		</div>
+	</body>
 </html>

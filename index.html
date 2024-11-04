@@ -2,6 +2,7 @@
 	<head>
 		<title>Class Schedule</title>
 		<link rel="stylesheet" type="text/css" href="style.css"></link>
+		<script src="java.js"></script>
 	</head>
 	<body>
 		<h1>Schedule</h1>
@@ -10,15 +11,23 @@
 			<input type="text" id="txtfirstname" size="8" autofocus></input>
 			<label id="lbllastname">Last Name:</label>
 			<input type="text" id="txtlastname" size="8"></input>
+			
 			<label id="lblid">Student ID:</label>
 			<input type="text" id="txtid" maxlength="9" size="6"></input>
+			
 			<label id="lblgradelvl">Grade Level:</label>
 			<input type="text" id="txtgradelvl" maxlength="2" size="1"></input>
+			
 			<button type="button" id="btnsubmit">Submit</button>
 		</div>
-		<div id="outputtable">
-			<table id="table">
-				
+		<div id="outputinfo">
+			<table id="tableinfo">
+				<tr>
+					<th id="tblfullname"></th> <th id="tblid"></th> <th id="tblgrade"></th>
+				</tr>
+			</table>
+			<table id="">
+			
 			</table>
 		</div>
 	</body>

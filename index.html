@@ -17,15 +17,61 @@
 			
 			<label id="lblgradelvl">Grade Level:</label>
 			<input type="text" id="txtgradelvl" maxlength="2" size="1"></input>
+
+            <label id="lblofficialclass">Official Class:</label>
+            <input type="text" id="txtofficialclass" maxlength="3" size="3"></input>
+
+            <label id="lblcounselor">Counselor:</label>
+            <input type="text" id="txtcounselor"></input>
 			
 			<button type="button" id="btnsubmit">Submit</button>
 		</div>
 		<div id="askclass">
-			<table>
+			<table id="createschedule">
+
 				<tr>
-					<th></th>
+                    <td>Period 1</td>
+                    <td><input type="text" id="firstclass" placeholder="1st class"></td>
+                    <td><input type="text" id="firstteacher" placeholder="teacher"></td>
+				</tr>
+                <tr>
+                    <td>Period 2</td>
+                    <td><input type="text" id="secondclass" placeholder="2nd class"></td>
+                    <td><input type="text" id="secondteacher" placeholder="teacher"></td>
+				</tr>
+                <tr>
+                    <td>Period 3</td>
+                    <td><input type="text" id="thirdclass" placeholder="3rd class"></td>
+                    <td><input type="text" id="thirdteacher" placeholder="teacher"></td>
+				</tr>
+                <tr>
+                    <td>Period 4</td>
+                    <td><input type="text" id="fourthclass" placeholder="4th class"></td>
+                    <td><input type="text" id="fourthteacher" placeholder="teacher"></td>
+				</tr>
+                <tr>
+                    <td>Period 5</td>
+                    <td><input type="text" id="fifthclass" placeholder="5th class"></td>
+                    <td><input type="text" id="fifthteacher" placeholder="teacher"></td>
+				</tr>
+                <tr>
+                    <td>Period 6</td>
+                    <td><input type="text" id="sixthclass" placeholder="6th class"></td>
+                    <td><input type="text" id="sixthteacher" placeholder="teacher"></td>
+				</tr>
+                <tr>
+                    <td>Period 7</td>
+                    <td><input type="text" id="seventhclass" placeholder="7th class"></td>
+                    <td><input type="text" id="seventhteacher" placeholder="teacher"></td>
+				</tr>
+                <tr>
+                    <td>Period 8</td>
+                    <td><input type="text" id="eighthclass" placeholder="8th class"></td>
+                    <td><input type="text" id="eighthteacher" placeholder="teacher"></td>
 				</tr>
 			</table>
+
+            <button type="button" id="btnschedule">Submit</button>
 		</div>
 	</body>
 </html>

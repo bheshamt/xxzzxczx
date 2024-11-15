@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     background-color: #f4f6f9;
     color: #333;
     text-align: center;
@@ -36,23 +36,10 @@ td {
     text-align: center;
 }
 
-tr:nth-child(even) td {
-    background-color: #f9fbfd;
-}
-
-#lastn, #firstn, #studentidn, #gradelvl, #offclass, #counselorn {
+#lastn, #firstn, #studentidn, #gradelvl, #offclass, #counselorn
+{
     font-weight: bold;
     color: #2c3e50;
-}
-
-td[id^="class"] {
-    font-size: 14px;
-    color: #34495e;
-    line-height: 1.4;
-}
-
-th[colspan="1"] {
-    background-color: #3498db;
 }
 
 th, td {

@@ -32,8 +32,8 @@ function GetInfo()
     document.getElementById("gradelvl").textContent = gradelevel;
     document.getElementById("offclass").textContent = officialclass;
     document.getElementById("counselorn").textContent = counselor;
-	document.getElementById("class1d1").textContent = firstclass + "\n" + firstteacher;
-	document.getElementById("class1d2").textContent = firstclass + "\n" + firstteacher;
+	document.getElementById("class1d1").innerHTML = firstclass + "<br>" + firstteacher;
+	document.getElementById("class1d2").innerHTML = firstclass + "<br>" + firstteacher;
 	document.getElementById("class1d3").textContent = firstclass + "\n" + firstteacher;
 	document.getElementById("class1d4").textContent = firstclass + "\n" + firstteacher;
 	document.getElementById("class1d5").textContent = firstclass + "\n" + firstteacher;

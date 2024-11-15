@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+td {
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+tr:nth-child(even) td {
+    background-color: #f9fbfd;
+}
+
+#lastn, #firstn, #studentidn, #gradelvl, #offclass, #counselorn {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+td[id^="class"] {
+    font-size: 14px;
+    color: #34495e;
+    line-height: 1.4;
+}
+
+th[colspan="1"] {
+    background-color: #3498db;
+}
+
+th, td {
+    border: 1px solid #b0c4de;
+    padding: 10px;
+}

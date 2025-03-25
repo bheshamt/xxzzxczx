@@ -5,7 +5,7 @@ function InitControls()
 {
 	document.getElementById("txtusername").textContent = "";
 	document.getElementById("txtpassword").textContent = "";
-	document.getElementByid("txtusername").focus();
+	document.getElementById("txtusername").focus();
 }
 
 function addListener()

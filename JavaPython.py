@@ -6,9 +6,9 @@ global whichfilename;
 whichfilename = "LoginAccounts.doc";
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", methods=["GET"])
 def main():
-    return render_template("GetInformation.html");
+    return render_template("GetInformation.html")
 
 @app.route("/info",methods=["POST"])
 def GetInfo():
@@ -17,10 +17,16 @@ def GetInfo():
     username = request.form.get('txtusername');
     userpasswd = request.form.get('txtpassword');
     if(username == "" or userpasswd == ""):
-        return render_template("GetInformation");
-    else:
-        CreateFileCheck();
-        return render_template("output1.html", username = username, password = userpasswd);
+        return render_template("GetInformation.html")
+    
+    CreateFileCheck();
+    with open(whichfilename, "r") as f:
+        lines = f.readlines()
+        lastcred = lines[-1].strip().split() if lines else ["", ""]
+    
+    return render_template("output1.html",
+                           username=lastcred[0],
+                           password=lastcred[1])
 
 def CreateFileCheck():
     fileDir = os.path.dirname(os.path.realpath("__file__"));
